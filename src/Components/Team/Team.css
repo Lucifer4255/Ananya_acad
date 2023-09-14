@@ -1,0 +1,12 @@
+.Team{
+    background-image: url('src/assets/wave-haikei (5).svg');
+    /* margin-top: 100px; */
+    height: 900px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.team-card{
+    height:300px
+}

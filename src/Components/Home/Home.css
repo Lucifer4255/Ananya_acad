@@ -1,0 +1,37 @@
+h1 {
+    font-size: 4em !important;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #EC8886;
+}
+
+#Home {
+    background: url('src/assets/bgg.png') no-repeat transparent;
+    background-size: cover;
+}
+
+.typewrite {
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    /* border-right: 3px solid; */
+    font-family: monospace;
+    font-size: 2em;
+}
+
+@keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }

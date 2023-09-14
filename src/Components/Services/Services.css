@@ -1,0 +1,8 @@
+.services {
+    background-image: url('src/assets/wave-haikei (4).svg');
+    height: 800px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
