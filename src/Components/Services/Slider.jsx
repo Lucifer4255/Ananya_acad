@@ -23,7 +23,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/mousewheel';
-
+import academicwriting from '../../assets/Academic Writing Editing.jpg'
+import contentwriting from '../../assets/pexels-rfstudio-3059747.jpg'
+import Thesis from '../../assets/ThesisDissertation.jpg'
+import Python from '../../assets/PythonJava.png'
+import SPSS from '../../assets/SPSS.jpg'
+import Mobdev from '../../assets/Mobile App Development.png'
+import LiveDash from '../../assets/Live  Dashboard designing.png'
+import CV from '../../assets/Professional CV.jpg'
 // import './styles.css';
 // import { Pagination } from 'swiper/modules';
 
@@ -58,7 +65,7 @@ export const Slider = () => {
             >
                 <SwiperSlide>
                     <div class="card" style={{width: '19rem'}}>
-                        <img src="src\assets\Academic Writing Editing.jpg" class="card-img-top" alt="..." style={{height:'18rem'}}/>
+                        <img src={academicwriting} class="card-img-top" alt="..." style={{height:'18rem'}}/>
                             <div class="card-body">
                                 <h5 class="card-title">Academic Writing</h5>
                                 {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
@@ -68,7 +75,7 @@ export const Slider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div class="card" style={{width: '19rem'}}>
-                        <img src="src\assets\pexels-rfstudio-3059747.jpg" class="card-img-top" alt="..." style={{height:'18rem'}}/>
+                        <img src={contentwriting} class="card-img-top" alt="..." style={{height:'18rem'}}/>
                             <div class="card-body">
                                 <h5 class="card-title">Content Writing</h5>
                                 {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
@@ -78,7 +85,7 @@ export const Slider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div class="card" style={{width: '19rem'}}>
-                        <img src="src\assets\ThesisDissertation.jpg" class="card-img-top" alt="..." style={{height:'18rem'}}/>
+                        <img src={Thesis} class="card-img-top" alt="..." style={{height:'18rem'}}/>
                             <div class="card-body">
                                 <h5 class="card-title">Thesis/Dissertation</h5>
                                 {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
@@ -88,7 +95,7 @@ export const Slider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div class="card" style={{width: '19rem'}}>
-                        <img src="src\assets\SPSS.jpg" class="card-img-top" alt="..." style={{height:'18rem'}}/>
+                        <img src={SPSS} class="card-img-top" alt="..." style={{height:'18rem'}}/>
                             <div class="card-body">
                                 <h5 class="card-title">SPSS</h5>
                                 {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
@@ -98,7 +105,7 @@ export const Slider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div class="card" style={{width: '19rem'}}>
-                        <img src="src\assets\PythonJava.png" class="card-img-top" alt="..." style={{height:'18rem'}}/>
+                        <img src={Python} class="card-img-top" alt="..." style={{height:'18rem'}}/>
                             <div class="card-body">
                                 <h5 class="card-title">Python/Java</h5>
                                 {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
@@ -108,7 +115,7 @@ export const Slider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div class="card" style={{width: '19rem'}}>
-                        <img src="src\assets\Mobile App Development.png" class="card-img-top" alt="..." style={{height:'18rem'}}/>
+                        <img src={Mobdev} class="card-img-top" alt="..." style={{height:'18rem'}}/>
                             <div class="card-body">
                                 <h5 class="card-title">Mobile App Development</h5>
                                 {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
@@ -118,7 +125,7 @@ export const Slider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div class="card" style={{width: '19rem'}}>
-                        <img src="src\assets\Live  Dashboard designing.png" class="card-img-top" alt="..." style={{height:'18rem'}}/>
+                        <img src={LiveDash} class="card-img-top" alt="..." style={{height:'18rem'}}/>
                             <div class="card-body">
                                 <h5 class="card-title">Live Dashboard Design</h5>
                                 {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
@@ -128,7 +135,7 @@ export const Slider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div class="card" style={{width: '19rem'}}>
-                        <img src="src\assets\Professional CV.jpg" class="card-img-top" alt="..." style={{height:'18rem'}}/>
+                        <img src={CV} class="card-img-top" alt="..." style={{height:'18rem'}}/>
                             <div class="card-body">
                                 <h5 class="card-title">Professional CV</h5>
                                 {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}

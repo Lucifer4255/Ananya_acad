@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion"
+import icon from '../../assets/user-icon.jpg'
 const fadeInAnimationVariants = {
     initial: {
         opacity: 0,
@@ -20,7 +21,7 @@ export const Card = ({ title, description }) => {
         }}>
             <div className="row g-0">
                 <div className="col-md-2">
-                    <img src="src\assets\user-icon.jpg" className="img-fluid rounded-start p-2" alt="..."/>
+                    <img src={icon} className="img-fluid rounded-start p-2" alt="..."/>
                 </div>
                 <div className="col-md-10">
                     <div className="card-body">

@@ -1,6 +1,7 @@
 import React from 'react'
 import './About.css'
 import { motion } from "framer-motion"
+import about from '../../assets/About.jpg'
 const fadeInAnimationVariants ={
   initial:{
     opacity:0,
@@ -34,7 +35,7 @@ export const About = () => {
         <motion.div className="col-md-5 p-4" variants={fadeInAnimationVariants} initial="initial" whileInView="animate"viewport={{
             once:true
           }}>
-          <img src='src\assets\About.jpg' className='About_img' alt="About..."/>
+          <img src={about} className='About_img' alt="About..."/>
         </motion.div>
       </div>
       <motion.div className="row" variants={fadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{
