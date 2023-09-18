@@ -1,23 +1,63 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 export const Contact = () => {
     const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('service_o3fr3an', 'template_m5j11ro', form.current, '8zqkTGXXp-X_LlfGd')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-  };
+    const sendEmail = (e) => {
+        e.preventDefault();
+        console.log();
+        if (e.target.name.value && e.target.email.value && e.target.message.value) {
+            emailjs.sendForm('service_o3fr3an', 'template_m5j11ro', form.current, '8zqkTGXXp-X_LlfGd')
+              .then((result) => {
+                  console.log(result.text);
+                  toast.success('🦄 Submitted Successfully!', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
+                  e.target.reset();
+              }, (error) => {
+                  console.log(error.text);
+                  toast.error('Error!', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
+              });
+            console.log("Values");
+        }
+        else {
+            console.log("error");
+            toast.error('Fill all The Fields!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+        }
+    };
     return (
         <div className="container-fluid p-5 " id="Contact" style={{ backgroundColor: "#EC8886" }}>
 
             <div className='container' style={{ maxWidth: "860px" }}>
-                <h2 className='text-center' style={{paddingRight:"15px"}}>Contact Us</h2>
+                <h2 className='text-center' style={{ paddingRight: "15px" }}>Contact Us</h2>
                 <div className='d-flex justify-content-center my-2 p-2'>
                     <a href="https://www.facebook.com/profile.php?id=100095269186299" className="text-white me-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -36,7 +76,7 @@ export const Contact = () => {
                     </a>
                 </div>
                 <form ref={form} onSubmit={sendEmail}>
-                <div className="mb-3">
+                    <div className="mb-3">
                         <label for="exampleFormControlInput1" className="form-label">Name</label>
                         <input type="name" name="name" className="form-control" id="exampleFormControlInput1" placeholder="Name" />
                     </div>
@@ -48,8 +88,9 @@ export const Contact = () => {
                         <label for="exampleFormControlTextarea1" className="form-label">Message</label>
                         <textarea className="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-                    <input type="submit" className="btn btn-outline-light m-3" value="Submit"/>
+                    <input type="submit" className="btn btn-outline-light m-3" value="Submit" />
                 </form>
+                <ToastContainer/>
             </div>
         </div>
     )
