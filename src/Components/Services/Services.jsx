@@ -22,7 +22,7 @@ import './Services.css'
 export const Services = () => {
     return (
         <>
-            <div className="container-fluid p-5" style={{
+            <div className="container-fluid p-5" id='Services' style={{
                 backgroundImage: `url(${spacer})`,
                 height: "800px",
                 width: '100%',
