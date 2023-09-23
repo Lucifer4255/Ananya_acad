@@ -50,58 +50,6 @@ import { Card } from './Card';
 const data = 
     [
         {
-            title: "HR Management",
-            img: HR
-        },
-        {
-            title: "Project Management",
-            img: pm
-        },
-        {
-            title: "Business Management",
-            img: business
-        },
-        {
-            title: "Biology",
-            img: bio
-        },
-        {
-            title: "Chemistry",
-            img: Chemistry
-        },
-        {
-            title: "Pharmacology",
-            img: pharm
-        },
-        {
-            title: "Science",
-            img: sci
-        },
-        {
-            title: "Maths",
-            img: Maths
-        },
-        {
-            title: "Geology",
-            img: Geology
-        },
-        {
-            title: "History",
-            img: hist
-        },
-        {
-            title: "Statistics",
-            img: stat
-        },
-        {
-            title: "Engineering",
-            img: engg
-        },
-        {
-            title: "Nursing",
-            img: nurse
-        },
-        {
             title: "Academic Writing",
             img: academicwriting
         },
