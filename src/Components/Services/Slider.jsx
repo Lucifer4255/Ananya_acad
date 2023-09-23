@@ -18,7 +18,7 @@ const fadeInAnimationVariants = {
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Navigation, Pagination, Scrollbar, A11y,Mousewheel } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, Mousewheel } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
@@ -31,8 +31,109 @@ import SPSS from '../../assets/SPSS.jpg'
 import Mobdev from '../../assets/Mobile App Development.png'
 import LiveDash from '../../assets/Live  Dashboard designing.png'
 import CV from '../../assets/Professional CV.jpg'
+import HR from '../../assets/Human Resource Management.jpeg';
+import pm from '../../assets/project-management.png'
+import business from '../../assets/Business Management.jpeg'
+import bio from '../../assets/Biology.jpeg'
+import Chemistry from '../../assets/Chemistry.jpeg';
+import Geology from '../../assets/Geology.jpg';
+import hist from '../../assets/History.jpg';
+import sci from '../../assets/Science.jpeg';
+import pharm from '../../assets/pharmacology.jpeg'
+import Maths from '../../assets/Maths.jpg';
+import stat from '../../assets/statistics.jpg'
+import nurse from '../../assets/nursing.jpeg';
+import engg from '../../assets/engg.jpeg'
 // import './styles.css';
 // import { Pagination } from 'swiper/modules';
+import { Card } from './Card';
+const data = 
+    [
+        {
+            title: "HR Management",
+            img: HR
+        },
+        {
+            title: "Project Management",
+            img: pm
+        },
+        {
+            title: "Business Management",
+            img: business
+        },
+        {
+            title: "Biology",
+            img: bio
+        },
+        {
+            title: "Chemistry",
+            img: Chemistry
+        },
+        {
+            title: "Pharmacology",
+            img: pharm
+        },
+        {
+            title: "Science",
+            img: sci
+        },
+        {
+            title: "Maths",
+            img: Maths
+        },
+        {
+            title: "Geology",
+            img: Geology
+        },
+        {
+            title: "History",
+            img: hist
+        },
+        {
+            title: "Statistics",
+            img: stat
+        },
+        {
+            title: "Engineering",
+            img: engg
+        },
+        {
+            title: "Nursing",
+            img: nurse
+        },
+        {
+            title: "Academic Writing",
+            img: academicwriting
+        },
+        {
+            title: "Content Writing",
+            img: contentwriting
+        },
+        {
+            title: "Thesis/Dissertation",
+            img: Thesis
+        },
+        {
+            title: "SPSS",
+            img: SPSS
+        },
+        {
+            title: "Python/Java",
+            img: Python
+        },
+        {
+            title: "Mobile App Development",
+            img: Mobdev
+        },
+        {
+            title: "Live Dashboard Design",
+            img: LiveDash
+        },
+        {
+            title: "Professional CV",
+            img: CV
+        }
+    ]
 
 export const Slider = () => {
     return (
@@ -43,16 +144,13 @@ export const Slider = () => {
                 slidesPerView={1}
                 spaceBetween={10}
                 mousewheel={true}
-                pagination={{
-                    clickable: true,
-                }}
                 breakpoints={{
                     640: {
                         slidesPerView: 2,
                         spaceBetween: 20,
                     },
                     768: {
-                        slidesPerView: 4,
+                        slidesPerView: 3,
                         spaceBetween: 40,
                     },
                     1024: {
@@ -60,90 +158,19 @@ export const Slider = () => {
                         spaceBetween: 60,
                     },
                 }}
-                modules={[Pagination,Mousewheel]}
+                modules={[Mousewheel]}
                 className="mySwiper"
             >
-                <SwiperSlide>
-                    <div class="card" style={{width: '19rem'}}>
-                        <img src={academicwriting} class="card-img-top" alt="..." style={{height:'18rem'}}/>
-                            <div class="card-body">
-                                <h5 class="card-title">Academic Writing</h5>
-                                {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-                                {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
-                            </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="card" style={{width: '19rem'}}>
-                        <img src={contentwriting} class="card-img-top" alt="..." style={{height:'18rem'}}/>
-                            <div class="card-body">
-                                <h5 class="card-title">Content Writing</h5>
-                                {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-                                {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
-                            </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="card" style={{width: '19rem'}}>
-                        <img src={Thesis} class="card-img-top" alt="..." style={{height:'18rem'}}/>
-                            <div class="card-body">
-                                <h5 class="card-title">Thesis/Dissertation</h5>
-                                {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-                                {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
-                            </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="card" style={{width: '19rem'}}>
-                        <img src={SPSS} class="card-img-top" alt="..." style={{height:'18rem'}}/>
-                            <div class="card-body">
-                                <h5 class="card-title">SPSS</h5>
-                                {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-                                {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
-                            </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="card" style={{width: '19rem'}}>
-                        <img src={Python} class="card-img-top" alt="..." style={{height:'18rem'}}/>
-                            <div class="card-body">
-                                <h5 class="card-title">Python/Java</h5>
-                                {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-                                {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
-                            </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="card" style={{width: '19rem'}}>
-                        <img src={Mobdev} class="card-img-top" alt="..." style={{height:'18rem'}}/>
-                            <div class="card-body">
-                                <h5 class="card-title">Mobile App Development</h5>
-                                {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-                                {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
-                            </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="card" style={{width: '19rem'}}>
-                        <img src={LiveDash} class="card-img-top" alt="..." style={{height:'18rem'}}/>
-                            <div class="card-body">
-                                <h5 class="card-title">Live Dashboard Design</h5>
-                                {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-                                {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
-                            </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="card" style={{width: '19rem'}}>
-                        <img src={CV} class="card-img-top" alt="..." style={{height:'18rem'}}/>
-                            <div class="card-body">
-                                <h5 class="card-title">Professional CV</h5>
-                                {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-                                {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
-                            </div>
-                    </div>
-                </SwiperSlide>
-                
+                {
+                    data.map((el) => {
+                        // console.log(el.title);
+                        return (
+                            <SwiperSlide key={el.title}>
+                                <Card title={el.title} img={el.img} />
+                            </SwiperSlide>
+                        )
+                    })
+                }
             </Swiper>
         </motion.div>
     )

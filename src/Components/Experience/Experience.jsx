@@ -3,6 +3,9 @@ import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import './Experience.css';
 import { useEffect } from 'react';
 import CountUp from 'react-countup';
+import client from '../../assets/happyclients.gif';
+import projects from '../../assets/banner0image.gif'
+import exp from '../../assets/yearsofexperience.gif'
 
 export const Experience = () => {
     // const count = useMotionValue(0);
@@ -19,15 +22,18 @@ export const Experience = () => {
             <div class="container my-5">
                 <div class="row">
                     <div class="col-md-4 text-center">
-                        <h3 id="count"><b><CountUp end={200} duration={10} enableScrollSpy={true} scrollSpyOnce={true}/></b></h3>
+                        <img src={client} alt='...' height={'60px'} width={'70px'}/>
+                        <h3 id="count"><b><span>+</span><CountUp end={200} duration={10} enableScrollSpy={true} scrollSpyOnce={true}/></b></h3>
                         <p id="count"><b>Clients</b></p>
                     </div>
                     <div class="col-md-4 text-center">
-                        <h3 id="count"><b><CountUp end={1000} duration={10} enableScrollSpy={true} scrollSpyOnce={true}/></b></h3>
+                        <img src={projects} alt='...' height={'60px'} width={'70px'}/>
+                        <h3 id="count"><b><span>+</span><CountUp end={10000} duration={10} enableScrollSpy={true} scrollSpyOnce={true}/></b></h3>
                         <p id="count"><b>Projects</b></p>
                     </div>
                     <div class="col-md-4 text-center">
-                        <h3 id="count"><b><CountUp end={10} duration={10} enableScrollSpy={true} scrollSpyOnce={true}/></b></h3>
+                        <img src={exp} alt='...' height={'60px'} width={'70px'}/>
+                        <h3 id="count"><span>+</span><b><CountUp end={10} duration={10} enableScrollSpy={true} scrollSpyOnce={true}/></b></h3>
                         <p id="count"><b>Years of Experience</b></p>
                     </div>
                 </div>

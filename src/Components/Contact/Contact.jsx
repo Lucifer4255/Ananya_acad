@@ -3,45 +3,111 @@ import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
+const data=[
+    {
+        "title": "HR Management"
+    },
+    {
+        "title": "Project Management"
+    },
+    {
+        "title": "Business Management"
+    },
+    {
+        "title": "Biology"
+    },
+    {
+        "title": "Chemistry"
+    },
+    {
+        "title": "Pharmacology"
+    },
+    {
+        "title": "Science"
+    },
+    {
+        "title": "Maths"
+    },
+    {
+        "title": "Geology"
+    },
+    {
+        "title": "History"
+    },
+    {
+        "title": "Statistics"
+    },
+    {
+        "title": "Engineering"
+    },
+    {
+        "title": "Nursing"
+    },
+    {
+        "title": "Academic Writing"
+    },
+    {
+        "title": "Content Writing"
+    },
+    {
+        "title": "Thesis/Dissertation"
+    },
+    {
+        "title": "SPSS"
+    },
+    {
+        "title": "Python/Java"
+    },
+    {
+        "title": "Mobile App Development"
+    },
+    {
+        "title": "Live Dashboard Design"
+    },
+    {
+        "title": "Professional CV"
+    }
+];
+let num=1;
 export const Contact = () => {
     const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
         console.log();
-        if (e.target.name.value && e.target.email.value && e.target.message.value) {
+        if (e.target.name.value && e.target.email.value && e.target.message.value && e.target.Phone.value) {
             emailjs.sendForm('service_o3fr3an', 'template_m5j11ro', form.current, '8zqkTGXXp-X_LlfGd')
-              .then((result) => {
-                  console.log(result.text);
-                  toast.success('🦄 Submitted Successfully!', {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
+                .then((result) => {
+                    console.log(result.text);
+                    toast.success('Thanks for connecting with us.. our executive and subject matter expert will contact you soon', {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
                     });
-                  e.target.reset();
-              }, (error) => {
-                  console.log(error.text);
-                  toast.error('Error!', {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
+                    e.target.reset();
+                }, (error) => {
+                    console.log(error.text);
+                    toast.error('Error!', {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
                     });
-              });
+                });
             console.log("Values");
         }
         else {
             console.log("error");
-            toast.error('Fill all The Fields!', {
+            toast.error('Fill all the necessary fields!', {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -50,7 +116,7 @@ export const Contact = () => {
                 draggable: true,
                 progress: undefined,
                 theme: "light",
-                });
+            });
         }
     };
     return (
@@ -85,12 +151,33 @@ export const Contact = () => {
                         <input type="email" name="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
                     </div>
                     <div className="mb-3">
+                        <label for="exampleFormControlInput1" className="form-label">Phone Number</label>
+                        <input type="Phone Number" name="Phone" className="form-control" id="exampleFormControlInput1" placeholder="+XX XXX XXX XXXX" />
+                    </div>
+                    <div className="mb-3">
+                        <label for="exampleFormControlInput1" className="form-label">University</label>
+                        <input type="University" name="University" className="form-control" id="exampleFormControlInput1" placeholder="Not Mandatory" />
+                    </div>
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>Others</option>
+                            {
+                                data.map((el) =>{
+                                    return(
+                                        <option key={el.title} value={num++}>{el.title}</option>
+                                    )
+                                })
+                            }
+                        </select>
+                        <label for="floatingSelect">Select a category</label>
+                    </div>
+                    <div className="mb-3">
                         <label for="exampleFormControlTextarea1" className="form-label">Message</label>
                         <textarea className="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
                     <input type="submit" className="btn btn-outline-light m-3" value="Submit" />
                 </form>
-                <ToastContainer/>
+                <ToastContainer />
             </div>
         </div>
     )

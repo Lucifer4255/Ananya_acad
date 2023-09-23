@@ -16,7 +16,7 @@ const fadeInAnimationVariants = {
 }
 export const Card = ({ title, description }) => {
     return (
-        <motion.div className="card mb-3" style={{maxWidth: '650px',height:'80vh'}}  variants={fadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{
+        <motion.div className="card mb-3" style={{maxWidth: '650px',minHeight:'35vh'}}  variants={fadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{
             once: true
         }}>
             <div className="row g-0">
@@ -32,7 +32,7 @@ export const Card = ({ title, description }) => {
                         <i className="bi bi-star-fill"></i>
                         <i className="bi bi-star-fill"></i>
                         <i className="bi bi-star-half"></i>
-                        <p className="card-text"><small className="text-body-secondary">{description}</small></p>
+                        <p className="card-text h6"><small className="text-body-secondary">{description}</small></p>
                     </div>
                 </div>
             </div>

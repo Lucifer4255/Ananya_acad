@@ -18,7 +18,7 @@ const fadeInAnimationVariants = {
 import bhanu from '../../assets/office bhanu.jpg'
 import bhanu_1 from '../../assets/office bhanu 1.jpg'
 import jayti from '../../assets/img---1.jpeg'
-import debesh from '../../assets/img--2.jpeg'
+import arshiya from '../../assets/Team 4.jpg'
 export const Team = () => {
     return (
         <>
@@ -43,47 +43,48 @@ export const Team = () => {
                     <div className="container">
                         <div className="container my-5">
                             <div className="row align-items-center justify-content-center">
-                                <motion.div className="col-md-3 p-3" variants={fadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{
+                                <motion.div className="col-lg-3 col-md-4 col-sm-6 p-3" variants={fadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{
                                     once: true
                                 }}>
                                     <div className="card" style={{ width: '18rem', height: "400px" }}>
                                         <img src={bhanu} className="card-img-top team-card" alt="..." height="285px" />
                                         <div className="card-body">
-                                            <p className="card-text text-center">Bhanu
-                                            </p>
+                                            <p className="card-title text-center">Bhanu</p>
+                                            <p className="card-text text-center h6">CEO</p>
                                         </div>
                                     </div>
                                 </motion.div>
-                                <motion.div className="col-md-3 p-3" variants={fadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{
+                                <motion.div className="col-lg-3 col-md-4 col-sm-6 p-3" variants={fadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{
                                     once: true
                                 }}>
                                     <div className="card" style={{ width: '18rem', height: "400px" }}>
                                         <img src={bhanu_1} className="card-img-top team-card" alt="..." height="285px" />
                                         <div className="card-body">
-                                            <p className="card-text text-center">Subhash
+                                            <p className="card-title text-center">Subhash
                                             </p>
+                                            <p className="card-text text-center h6">Lead Program Manager</p>
                                         </div>
                                     </div>
                                 </motion.div>
-                                <motion.div className="col-md-3 p-3" variants={fadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{
+                                <motion.div className="col-lg-3 col-md-4 col-sm-6 p-3" variants={fadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{
                                     once: true
                                 }}>
                                     <div className="card" style={{ width: '18rem', height: "400px" }}>
                                         <img src={jayti} className="card-img-top team-card" alt="..." height="285px" />
                                         <div className="card-body">
-                                            <p className="card-text text-center">Jayti
-                                            </p>
+                                            <p className="card-title text-center p-0">Jayti</p>
+                                            <p className="card-text text-center h6 p-0">Student Engagement Manager</p>
                                         </div>
                                     </div>
                                 </motion.div>
-                                <motion.div className="col-md-3 p-3" variants={fadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{
+                                <motion.div className="col-lg-3 col-md-4 col-sm-6 p-3" variants={fadeInAnimationVariants} initial="initial" whileInView="animate" viewport={{
                                     once: true
                                 }}>
                                     <div className="card" style={{ width: '18rem', height: "400px" }}>
-                                        <img src={debesh} className="card-img-top team-card" alt="..." />
+                                        <img src={arshiya} className="card-img-top team-card" alt="..." />
                                         <div className="card-body">
-                                            <p className="card-text text-center ">Debesh
-                                            </p>
+                                            <p className="card-title text-center ">Arshiya</p>
+                                            <p className="card-text text-center h6 p-0">QA Manager</p>
                                         </div>
                                     </div>
                                 </motion.div>

@@ -128,15 +128,12 @@ const data = [
 export const Clients = () => {
   console.log(data)
   return (
-    <div className='container-fluid vh-100 clients'>
+    <div className='container-fluid clients'>
       <h2 className='text-center my-5'>What Our Clients Say</h2>
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
         mousewheel={true}
-        pagination={{
-          clickable: true,
-        }}
         breakpoints={{
           640: {
             slidesPerView: 2,
@@ -151,7 +148,7 @@ export const Clients = () => {
             spaceBetween: 60,
           },
         }}
-        modules={[Pagination, Mousewheel]}
+        modules={[ Mousewheel]}
         className="mySwiper"
       >
         {
