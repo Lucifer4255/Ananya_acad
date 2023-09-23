@@ -37,7 +37,7 @@ import business from '../../assets/Business Management.jpeg'
 import bio from '../../assets/Biology.jpeg'
 import Chemistry from '../../assets/Chemistry.jpeg';
 import Geology from '../../assets/Geology.jpg';
-import hist from '../../assets/History.jpg';
+import hist from '../../assets/history.jpg';
 import sci from '../../assets/Science.jpeg';
 import pharm from '../../assets/pharmacology.jpeg'
 import Maths from '../../assets/Maths.jpg';
