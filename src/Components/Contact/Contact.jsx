@@ -74,7 +74,7 @@ export const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        console.log();
+        // console.log(e.target.options.value);
         if (e.target.name.value && e.target.email.value && e.target.message.value && e.target.Phone.value) {
             emailjs.sendForm('service_o3fr3an', 'template_m5j11ro', form.current, '8zqkTGXXp-X_LlfGd')
                 .then((result) => {
@@ -117,10 +117,10 @@ export const Contact = () => {
                 progress: undefined,
                 theme: "light",
             });
+           }
         }
-    };
-    return (
-        <div className="container-fluid p-5 " id="Contact" style={{ backgroundColor: "#EC8886" }}>
+        return (
+            <div className="container-fluid p-5 " id="Contact" style={{ backgroundColor: "#EC8886" }}>
 
             <div className='container' style={{ maxWidth: "860px" }}>
                 <h2 className='text-center' style={{ paddingRight: "15px" }}>Contact Us</h2>
@@ -159,7 +159,7 @@ export const Contact = () => {
                         <input type="University" name="University" className="form-control" id="exampleFormControlInput1" placeholder="Not Mandatory" />
                     </div>
                     <div class="form-floating">
-                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <select class="form-select" name="options" id="floatingSelect" aria-label="Floating label select example">
                             <option selected>Others</option>
                             {
                                 data.map((el) =>{
@@ -181,4 +181,6 @@ export const Contact = () => {
             </div>
         </div>
     )
-}
+};
+
+    
